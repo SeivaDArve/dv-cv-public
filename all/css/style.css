@@ -1,0 +1,58 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Div com tamanho A4 */
+.pagina-a4 {
+    width: 210mm;
+    height: 297mm;
+    background-color: lightblue;
+    border: 2px solid black; /* Rebordo preto */
+    padding: 20mm;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    overflow-x: auto;   /* Habilita o scroll horizontal */
+    overflow-y: auto;   /* Habilita o scroll vertical */
+    overflow: hidden;
+    transform: scale(1.2);  /* Exemplo de zoom de 20% */
+}
+
+/* Para impressão */
+@media print {
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .pagina-a4 {
+        box-shadow: none;
+        page-break-after: always;
+    }
+}
+
